@@ -76,16 +76,6 @@ To simplify the problem, you should make two other assumptions:
                 }
             ]'
 ```
-https://cmcs26mhxlov4vdlllf7vj5jcy0fttes.lambda-url.us-east-2.on.aws/
-
-curl -X POST https://cmcs26mhxlov4vdlllf7vj5jcy0fttes.lambda-url.us-east-2.on.aws/ \
-        -H "Content-Type: application/json" \
-        -d '[
-                {
-                    "length": 10,
-                    "quantity": 1
-                }
-            ]'
 
 returns
 ```json
