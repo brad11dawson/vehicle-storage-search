@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.149",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.17",
+    "esbuild": "^0.25.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  },
+  "scripts": {
+  "prebuild": "rm -rf dist",
+  "build": "esbuild src/index.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js",
+  "postbuild": "cp src/listings.json dist/ && cd dist && zip -r index.zip index.js* listings.json"
+  }
+}
